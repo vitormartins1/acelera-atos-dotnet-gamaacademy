@@ -5,4 +5,15 @@
  * imprima "não encontrei a letra G".
  */
 
-Console.WriteLine("Exercicio 04");
+string frase;
+
+frase = Console.ReadLine();
+
+if (frase.Contains("G") || frase.Contains("g"))
+{
+    Console.WriteLine("Encontrei a letra G");
+}
+else
+{
+    Console.WriteLine("Não encontrei a letra G");
+}
