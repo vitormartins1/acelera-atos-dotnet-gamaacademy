@@ -1,5 +1,5 @@
 ﻿/* Para toda lista de exercicios, podem existir testes ou atividades 
- * que o compilador não vai permitir a execussão. Quando isto ocorrer 
+ * que o compilador não vai permitir a execução. Quando isto ocorrer 
  * deixe como comentários no codigo a descrição da situação, para que 
  * fique evidente a realização do seu teste.
  * 
@@ -28,10 +28,44 @@ e = 0.5;
 f = 0.5m;
 
 // segundo teste: recebendo valores informados pelo usuario
-a = short.Parse(Console.ReadLine());
+
+// caso insira um valor muito grande para armazenar como short:
+// System.OverflowException: 'Value was either too large or too small for an Int16.'
+Console.WriteLine("short: ");          
+a = short.Parse(Console.ReadLine());    
+Console.WriteLine("short: " + a);
+
+// caso insira um valor muito grande para armazenar como int:
+// System.OverflowException: 'Value was either too large or too small for an Int32.'
+Console.WriteLine("int: ");
 b = int.Parse(Console.ReadLine());
+Console.WriteLine("int: " + b);
+
+// caso insira um valor muito grande para armazenar como long:
+// System.OverflowException: 'Value was either too large or too small for an Int64.'
+Console.WriteLine("long: ");
 c = long.Parse(Console.ReadLine());
+Console.WriteLine("long: " + c);
+
+
+Console.WriteLine("float: ");
 d = float.Parse(Console.ReadLine());
+Console.WriteLine("float: " + d);
+
+// transforma em notação cientifica valores muito grandes ao tentar imprimir o valor no console
+Console.WriteLine("double: ");
 e = double.Parse(Console.ReadLine());
+Console.WriteLine("double: " + e);
+
+// caso insira um valor muito grande para armazenar como decimal:
+// System.OverflowException: 'Value was either too large or too small for a Decimal.'
+Console.WriteLine("decimal: ");
 f = decimal.Parse(Console.ReadLine());
+Console.WriteLine("decimal: " + f);
+
+// Nos casos short, int e longe, se inserir um numero ponto flutuante ou string:
+// System.FormatException: 'Input string was not in a correct format.'
+
+// Nos casos float, double e decimal, se inserir uma string:
+// System.FormatException: 'Input string was not in a correct format.'
 
