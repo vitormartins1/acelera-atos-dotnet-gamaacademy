@@ -35,36 +35,6 @@ struct Aluno
 
         Console.WriteLine("Nota do aluno: ");
         nota = float.Parse(Console.ReadLine());
-
-        //Console.WriteLine("Situação do aluno: Aprovado = (1) Recuperação = (2) Reprovado = (3) ");
-        //int numSituacao = int.Parse(Console.ReadLine());
-        //switch (numSituacao)
-        //{
-        //    case 1:
-        //        situacao = "Aprovado";
-        //        break;
-        //    case 2:
-        //        situacao = "Recuperação";
-        //        break;
-        //    case 3:
-        //        situacao = "Reprovado";
-        //        break;
-        //    default:
-        //        break;
-        //}
-
-        //switch (nota)
-        //{
-        //    case >7f:
-        //        situacao = "Aprovado";
-        //        break;
-        //    case <3.5f:
-        //        situacao = "Reprovado";
-        //        break;
-        //    default:
-        //        situacao = "Recuperação";
-        //        break;
-        //}
     }
 }
 
@@ -105,13 +75,29 @@ class Program
         mediaAritimetica /= alunos.Count;
         Console.WriteLine("A media aritimetica das notas de todos os alunos é: " + mediaAritimetica);
 
-        // 
-        for (int i = 0; i < alunos.Count - 1; i++)
+        // definição da situação do aluno
+        for (int i = 0; i < alunos.Count; i++)
         {
-            if (alunos[i].nota < mediaAritimetica + 3 && alunos[i].nota > mediaAritimetica - 3)
+            Aluno aluno = alunos[i];
+            if (aluno.nota < mediaAritimetica + 3 && aluno.nota > mediaAritimetica - 3)
             {
-                alunos[i].nota = mediaAritimetica + 3;
+                aluno.situacao = Situacao.RECUPERACAO;
             }
+            else if (aluno.nota >= mediaAritimetica + 3)
+            {
+                aluno.situacao = Situacao.APROVADO;
+            }
+            else if (aluno.nota <= mediaAritimetica - 3)
+            {
+                aluno.situacao = Situacao.REPROVADO;
+            }
+            alunos[i] = aluno;
+        }
+
+        // ultima listagem com definição da situação dos alunos
+        foreach (var item in alunos)
+        {
+            Console.WriteLine(item.nome + " SITUAÇÃO: " + item.situacao);
         }
     }
 }
