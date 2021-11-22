@@ -1,4 +1,4 @@
-﻿namespace Aula3
+﻿/*namespace Aula3
 {
     class Valor
     {
@@ -72,7 +72,7 @@
         // logo seu valor de memoria é referenciado como o mesmo que 'num'
         // ela precisa ser inicializada para ser passada como ref
         static void Imp2(ref int num)
-        { 
+        {
             Console.WriteLine("Oi " + num);
             num = 13;
         }
@@ -80,15 +80,15 @@
         // quando usado out a variavel 'a' é passada para ser setada
         // dentro da funcao, logo antes dela ser usada na funcao e
         // necessario atribuir um valor
-        static void Imp3(out int num)    
-        {                                
+        static void Imp3(out int num)
+        {
             num = 13;
             Console.WriteLine("Oi " + num);
         }
-        
+
         // Todo tipo objeto e automaticamente referenciado
         static void Imp4(Valor novoValor)
-        {                                
+        {
             novoValor.num = 13;
             Console.WriteLine("Oi " + novoValor.num);
         }
@@ -101,4 +101,4 @@
             Console.WriteLine("Oi " + num);
         }
     }
-}
+}*/
