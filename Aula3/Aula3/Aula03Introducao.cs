@@ -114,6 +114,7 @@ namespace Aula3
     #endregion
 
     #region Parte 04 Enums
+    /*
     //Enum:
     //É um inteiro com uma visualização melhor no nosso codigo
     enum EEstadoCivil
@@ -129,14 +130,13 @@ namespace Aula3
         Vazio = 2,
         Erro = 0
     }
-
+    */
     //Usando o enum para atribuição de um dado (em um construtor também)
     //Imprimindo um enum na saida do console
 
     #endregion
 
     #region Parte 05 Manipulando Strings
-    /*
     //Strings:
     //Interpolação de Strings
 
@@ -238,10 +238,10 @@ namespace Aula3
             Console.WriteLine(texto2);
         }
     }
-    */
     #endregion
 
     #region Parte 06 Datas
+    /*
     class Aula03Introducao
     {
         static void Main()
@@ -282,5 +282,6 @@ namespace Aula3
             Console.WriteLine(parsedDate.ToString("dddd"));
         }
     }
+    */
     #endregion
 }
