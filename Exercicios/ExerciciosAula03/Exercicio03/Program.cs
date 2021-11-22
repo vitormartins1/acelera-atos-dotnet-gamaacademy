@@ -15,15 +15,15 @@
 
 public enum Situacao
 {
-    APROVADO, RECUPERACAO, REPROVADO
+    Aprovado, Recuperacao, Reprovado
 }
 
 struct Aluno
 {
-    public string nome;
-    public short idade;
-    public float nota;
-    public Situacao situacao;
+    public string nome { get; set; }
+    public short idade { get; set; }
+    public float nota { get; set; }
+    public Situacao situacao { get; set; }
 
     public void preencher()
     {
@@ -38,14 +38,22 @@ struct Aluno
     }
 }
 
-class Program
+internal class Program
 {
+    const int QUANTIDADE_ALUNOS = 3;
+
+    // posso criar um list de alunos, mas estarei passando referencia
+    // e nao valor.nesse caso onde usamos struct e considerado uma ma pratica
+    static List<Aluno> alunos = new List<Aluno>();
+
+    // Declaro estrutura que e do tipo valor e nao classe.
+    // Quando atribuo um valor tipo eu crio uma copia
+    // ao inves de atribuir uma referencia a ela
+    static Aluno[] alu = new Aluno[QUANTIDADE_ALUNOS]; 
     static void Main()
     {
-        int quantidadeDeAlunos = 3;
-        List<Aluno> alunos = new List<Aluno>();
 
-        for (int i = 0; i < quantidadeDeAlunos; i++)
+        for (int i = 0; i < QUANTIDADE_ALUNOS; i++)
         {
             Aluno aluno = new Aluno();
             aluno.preencher();
@@ -53,7 +61,7 @@ class Program
         }
 
         // listagem dos dados de todos os alunos
-        for (int i = 0; i < quantidadeDeAlunos; i++)
+        for (int i = 0; i < QUANTIDADE_ALUNOS; i++)
         {
             Console.WriteLine("Nome: " + alunos[i].nome + 
                               ", Idade: " + alunos[i].idade + 
@@ -81,15 +89,15 @@ class Program
             Aluno aluno = alunos[i];
             if (aluno.nota < mediaAritimetica + 3 && aluno.nota > mediaAritimetica - 3)
             {
-                aluno.situacao = Situacao.RECUPERACAO;
+                aluno.situacao = Situacao.Recuperacao;
             }
             else if (aluno.nota >= mediaAritimetica + 3)
             {
-                aluno.situacao = Situacao.APROVADO;
+                aluno.situacao = Situacao.Aprovado;
             }
             else if (aluno.nota <= mediaAritimetica - 3)
             {
-                aluno.situacao = Situacao.REPROVADO;
+                aluno.situacao = Situacao.Reprovado;
             }
             alunos[i] = aluno;
         }
