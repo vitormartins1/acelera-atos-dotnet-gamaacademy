@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsandoDispose", "UsandoDispose\UsandoDispose.csproj", "{ED379A09-2F23-4799-8D73-2C8B31557B05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsandoStatica", "UsandoStatica\UsandoStatica.csproj", "{94DA3061-3959-407E-B04D-87B013B3211F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{ED379A09-2F23-4799-8D73-2C8B31557B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED379A09-2F23-4799-8D73-2C8B31557B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED379A09-2F23-4799-8D73-2C8B31557B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DA3061-3959-407E-B04D-87B013B3211F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DA3061-3959-407E-B04D-87B013B3211F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DA3061-3959-407E-B04D-87B013B3211F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DA3061-3959-407E-B04D-87B013B3211F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
