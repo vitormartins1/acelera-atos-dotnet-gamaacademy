@@ -20,12 +20,17 @@ public enum Menu
 
 struct Aluno
 {
-    public string nome;
-    public short idade;
-    public float nota;
-    public Situacao situacao;
+    public Aluno()
+    {
+        preencher();
+    }
 
-    public void preencher()
+    public string nome = "";
+    public short idade = 0;
+    public float nota = 0f;
+    public Situacao situacao = Situacao.Recuperacao;
+
+    void preencher()
     {
         Console.WriteLine("Nome do aluno: ");
         nome = Console.ReadLine();
