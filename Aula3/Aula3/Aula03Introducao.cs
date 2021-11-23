@@ -137,6 +137,7 @@ namespace Aula3
     #endregion
 
     #region Parte 05 Manipulando Strings
+    /*
     //Strings:
     //Interpolação de Strings
 
@@ -238,10 +239,11 @@ namespace Aula3
             Console.WriteLine(texto2);
         }
     }
+    */
     #endregion
 
     #region Parte 06 Datas
-    /*
+
     class Aula03Introducao
     {
         static void Main()
@@ -282,6 +284,6 @@ namespace Aula3
             Console.WriteLine(parsedDate.ToString("dddd"));
         }
     }
-    */
+
     #endregion
 }

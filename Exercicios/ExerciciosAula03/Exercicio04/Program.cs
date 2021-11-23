@@ -110,22 +110,7 @@ class Program
                         DefinirSituacaoDeAlunos(mediaAritimetica, alunos);
                         break;
                     case Menu.PesquisarAluno:
-                        Console.WriteLine("Insira o nome do aluno: ");
-                        string nome = Console.ReadLine();
-
-                        foreach (var item in alunos)
-                        {
-                            if (item.nome.Contains(nome, StringComparison.OrdinalIgnoreCase))
-                            {
-                                Console.WriteLine("Nome: " + item.nome +
-                                                  "| Idade: " + item.idade +
-                                                  "| Nota: " + item.nota);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Nenhum aluno com o nome informado foi encontrado.");
-                            }
-                        }
+                        PesquisarAluno(alunos);
                         break;
                     case Menu.Sair:
                         sair = true;
@@ -133,6 +118,25 @@ class Program
                     default:
                         break;
                 }
+            }
+        }
+    }
+
+    private static void PesquisarAluno(List<Aluno> alunos) {
+        Console.WriteLine("Insira o nome do aluno: ");
+        string nome = Console.ReadLine();
+
+        foreach (var item in alunos)
+        {
+            if (item.nome.Contains(nome, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Nome: " + item.nome +
+                                  "| Idade: " + item.idade +
+                                  "| Nota: " + item.nota);
+            }
+            else
+            {
+                Console.WriteLine("Nenhum aluno com o nome informado foi encontrado.");
             }
         }
     }
