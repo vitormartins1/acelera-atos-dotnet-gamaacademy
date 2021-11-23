@@ -54,9 +54,11 @@ class Program
         List<Aluno> alunos = new List<Aluno>();
         Menu menu = new Menu();
 
-        bool validInfo = false;
-        while (!validInfo)
+        bool sair = false;
+        while (!sair)
         {
+            // rotina do menu
+            bool validInfo = true;
             Console.WriteLine("Escolha a opção: " +
                 "\n (0) => Cadastro de aluno " +
                 "\n (1) => Listar alunos " +
@@ -84,35 +86,55 @@ class Program
                     break;
                 default:
                     Console.WriteLine("Insira um valor válido...");
+                    validInfo = false;
                     break;
             }
 
-            Console.WriteLine(menu.ToString() + ":");
-
-            switch (menu)
+            // rotina das opcoes de menu
+            if (validInfo)
             {
-                case Menu.CadastroAluno:
-                    CadastroDeAlunos(quantidadeDeAlunos, alunos);
-                    break;
-                case Menu.ListarAlunos:
-                    ListarAlunos(quantidadeDeAlunos, alunos);
-                    break;
-                case Menu.CalcularMedia:
-                    OrganizarNotasCrescente(alunos);
-                    mediaAritimetica = MediaAritimeticaNotas(alunos);
-                    DefinirSituacaoDeAlunos(mediaAritimetica, alunos);
-                    break;
-                case Menu.PesquisarAluno:
-                    break;
-                case Menu.Sair:
-                    validInfo = true;
-                    break;
-                default:
-                    break;
+                Console.WriteLine(menu.ToString() + ":");
+
+                switch (menu)
+                {
+                    case Menu.CadastroAluno:
+                        // CadastroDeAlunos(quantidadeDeAlunos, alunos);
+                        CadastrarAluno(alunos);
+                        break;
+                    case Menu.ListarAlunos:
+                        ListarAlunos(quantidadeDeAlunos, alunos);
+                        break;
+                    case Menu.CalcularMedia:
+                        OrganizarNotasCrescente(alunos);
+                        mediaAritimetica = MediaAritimeticaNotas(alunos);
+                        DefinirSituacaoDeAlunos(mediaAritimetica, alunos);
+                        break;
+                    case Menu.PesquisarAluno:
+                        Console.WriteLine("Insira o nome do aluno: ");
+                        string nome = Console.ReadLine();
+
+                        foreach (var item in alunos)
+                        {
+                            if (item.nome.Contains(nome, StringComparison.OrdinalIgnoreCase))
+                            {
+                                Console.WriteLine("Nome: " + item.nome +
+                                                  "| Idade: " + item.idade +
+                                                  "| Nota: " + item.nota);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum aluno com o nome informado foi encontrado.");
+                            }
+                        }
+                        break;
+                    case Menu.Sair:
+                        sair = true;
+                        break;
+                    default:
+                        break;
+                }
             }
-
         }
-
     }
 
     private static void DefinirSituacaoDeAlunos(float mediaAritimetica, List<Aluno> alunos)
@@ -145,11 +167,18 @@ class Program
 
     private static void OrganizarNotasCrescente(List<Aluno> alunos)
     {
-        // maior e menor nota
-        // uso o metodo de ordencao de listas passando como referencia de ordenacao a nota crescente
-        alunos.Sort((a, b) => a.nota.CompareTo(b.nota));
-        Console.WriteLine(alunos[alunos.Count - 1].nome + " teve a maior nota: " + alunos[alunos.Count - 1].nota);
-        Console.WriteLine(alunos[0].nome + " teve a menor nota: " + alunos[0].nota);
+        if (alunos.Count > 0)
+        {
+            // maior e menor nota
+            // uso o metodo de ordencao de listas passando como referencia de ordenacao a nota crescente
+            alunos.Sort((a, b) => a.nota.CompareTo(b.nota));
+            Console.WriteLine(alunos[alunos.Count - 1].nome + " teve a maior nota: " + alunos[alunos.Count - 1].nota);
+            Console.WriteLine(alunos[0].nome + " teve a menor nota: " + alunos[0].nota);
+        }
+        else
+        {
+            Console.WriteLine("Nenhum aluno cadastrado.");
+        }
     }
 
     private static float MediaAritimeticaNotas(List<Aluno> alunos)
@@ -171,19 +200,32 @@ class Program
         for (int i = 0; i < quantidadeDeAlunos; i++)
         {
             Aluno aluno = new Aluno();
-            aluno.preencher();
+            //aluno.preencher();
             alunos.Add(aluno);
         }
     }
 
+    private static void CadastrarAluno(List<Aluno> alunos) 
+    {
+        Aluno aluno = new Aluno();
+        alunos.Add(aluno);
+    }
+
     private static void ListarAlunos(int quantidadeDeAlunos, List<Aluno> alunos)
     {
-        // listagem dos dados de todos os alunos
-        for (int i = 0; i < quantidadeDeAlunos; i++)
+        if (alunos.Count > 0)
         {
-            Console.WriteLine("Nome: " + alunos[i].nome +
-                              ", Idade: " + alunos[i].idade +
-                              ", Nota: " + alunos[i].nota);
+            // listagem dos dados de todos os alunos
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                Console.WriteLine("Nome: " + alunos[i].nome +
+                                  "| Idade: " + alunos[i].idade +
+                                  "| Nota: " + alunos[i].nota);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhum aluno cadastrado.");
         }
     }
 }
