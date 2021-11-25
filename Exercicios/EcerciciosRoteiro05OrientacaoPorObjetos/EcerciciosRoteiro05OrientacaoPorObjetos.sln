@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcerciciosRoteiro05OrientacaoPorObjetos", "EcerciciosRoteiro05OrientacaoPorObjetos\EcerciciosRoteiro05OrientacaoPorObjetos.csproj", "{893F1962-4048-4081-8E97-D44F45C05178}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecercicio01", "EcerciciosRoteiro05OrientacaoPorObjetos\Ecercicio01.csproj", "{893F1962-4048-4081-8E97-D44F45C05178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecercicio02", "Ecercicio02\Ecercicio02.csproj", "{7AAA4027-38F4-47BF-8649-8068EABE7B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecercicio03", "Ecercicio03\Ecercicio03.csproj", "{928E6878-A2F3-4654-ABA6-4672D84ACC30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{893F1962-4048-4081-8E97-D44F45C05178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{893F1962-4048-4081-8E97-D44F45C05178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{893F1962-4048-4081-8E97-D44F45C05178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AAA4027-38F4-47BF-8649-8068EABE7B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AAA4027-38F4-47BF-8649-8068EABE7B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AAA4027-38F4-47BF-8649-8068EABE7B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AAA4027-38F4-47BF-8649-8068EABE7B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928E6878-A2F3-4654-ABA6-4672D84ACC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928E6878-A2F3-4654-ABA6-4672D84ACC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928E6878-A2F3-4654-ABA6-4672D84ACC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928E6878-A2F3-4654-ABA6-4672D84ACC30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
