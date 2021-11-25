@@ -5,7 +5,6 @@
 // Arquivos....https://docs.microsoft.com/pt-br/troubleshoot/dotnet/csharp/read-write-text-file
 
 #region PARTE 01 Lendo Arquivos txt
-/*
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -94,7 +93,6 @@ namespace ArquivoTexto
         }
     }
 }
-*/
 #endregion
 
 #region PARTE 02 Gravando e lendo de arquivos XML 
@@ -183,6 +181,7 @@ namespace ArquivoTexto
 #endregion
 
 #region PARTE 03 Gravando e lendo arquivo json
+/*
 //////////////////////////////////
 // https://docs.microsoft.com/pt-br/dotnet/standard/serialization/system-text-json-how-to?pivots=dotnet-6-0
 // Gravando e lendo arquivo json
@@ -263,6 +262,7 @@ namespace ArquivoTexto
         }
     }
 }
+*/
 #endregion
 
 
