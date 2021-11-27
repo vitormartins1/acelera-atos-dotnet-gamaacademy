@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 3) Refatore o projeto dos Alunos para que ele possa usar não mais uma
+// Struct e sim uma classe, Não mais um vetor de alunos e sim uma LIsta de alunos.
