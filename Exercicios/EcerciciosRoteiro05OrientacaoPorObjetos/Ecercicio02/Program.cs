@@ -5,6 +5,26 @@
 // metodos abstratos e virtuais, tente sobrescrever metodos publicos, protegidos e privados,
 // todos eles de forma padrão, abstrata e virtual. 
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        CenaDeLuta cenaLuta = new CenaDeLuta();
+        CenaDeRomance cenaRomance = new CenaDeRomance();
+
+        cenaLuta.ContratarAtores();
+        cenaLuta.ChamarAtores();
+        cenaLuta.ChamarDuble();
+        cenaLuta.IniciarGravacao();
+        cenaLuta.EncerrarGravacao();
+
+        cenaRomance.ContratarAtores();
+        cenaRomance.ChamarAtores();
+        cenaRomance.IniciarGravacao();
+        cenaRomance.EncerrarGravacao();
+    }
+}
+
 public class CenaDeLuta : CenaBase
 {
     // metodo abstrato e obrigatorio a ser implementado na class
