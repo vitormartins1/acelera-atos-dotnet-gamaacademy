@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FabricaPadrao {
-    interface IPersistencia {
-        EntidadeBase CadastrarEntidade(EntidadeBase eb);
-        List<EntidadeBase> ListarEntidade();
-        void RemoverEntidade(EntidadeBase eb);
-        void AtualizarEntidade(EntidadeBase eb);
+    public interface IPersistencia {
+        EntidadeBase<object> CadastrarEntidade(EntidadeBase<object> eb);
+        List<EntidadeBase<object>> ListarEntidade();
+        void RemoverEntidade(EntidadeBase<object> eb);
+        void AtualizarEntidade(EntidadeBase<object> eb);
     }
 }

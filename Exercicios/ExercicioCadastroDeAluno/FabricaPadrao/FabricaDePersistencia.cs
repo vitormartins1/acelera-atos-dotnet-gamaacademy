@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FabricaPadrao 
 {
-    internal class FabricaDePersistencia 
+    public class FabricaDePersistencia 
     {
         const int TipoDePersistencia = 0;
         static FabricaDePersistencia instance = null;
