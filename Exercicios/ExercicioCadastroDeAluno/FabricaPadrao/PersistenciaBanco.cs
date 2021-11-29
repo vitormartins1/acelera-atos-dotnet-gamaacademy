@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace FabricaPadrao {
     internal class PersistenciaBanco : IPersistencia {
-        public void AtualizarEntidade<T>(T eb) where T : class {
+        public void AtualizarEntidade<T>(T eb) where T : IGenerico {
             throw new NotImplementedException();
         }
 
-        public T CadastrarEntidade<T>(T eb) where T : class {
+        public T CadastrarEntidade<T>(T eb) where T : IGenerico {
             throw new NotImplementedException();
         }
 
-        public List<T> ListarEntidade<T>() where T : class {
+        public List<T> ListarEntidade<T>() where T : IGenerico {
             throw new NotImplementedException();
         }
 
-        public void RemoverEntidade<T>(T eb) where T : class {
+        public void RemoverEntidade<T>(T eb) where T : IGenerico {
             throw new NotImplementedException();
         }
     }

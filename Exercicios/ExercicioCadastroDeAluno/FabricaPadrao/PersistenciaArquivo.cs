@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace FabricaPadrao {
     internal class PersistenciaArquivo : IPersistencia {
-        public void AtualizarEntidade<T>(T eb) where T : class {
+        public void AtualizarEntidade<T>(T eb) where T : IGenerico {
             throw new NotImplementedException();
         }
 
-        public T CadastrarEntidade<T>(T eb) where T : class {
+        public T CadastrarEntidade<T>(T eb) where T : IGenerico {
             StreamWriter sw = new StreamWriter("C:\\NOVO\\aluno.txt", true);
 
             sw.WriteLine($"{eb.Nome};{eb.Cpf};{eb.Telefone};{(int)eb.Situacao};{eb.DataRegistro}");
@@ -19,13 +19,13 @@ namespace FabricaPadrao {
             return eb;
         }
 
-        public List<T> ListarEntidade<T>() where T : class {
+        public List<T> ListarEntidade<T>() where T : IGenerico {
             List<T> listaEntidades = new List<T>();
 
             return listaEntidades;
         }
 
-        public void RemoverEntidade<T>(T eb) where T : class {
+        public void RemoverEntidade<T>(T eb) where T : IGenerico {
             throw new NotImplementedException();
         }
     }
