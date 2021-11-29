@@ -8,5 +8,7 @@ namespace FabricaPadrao {
     interface IPersistencia {
         EntidadeBase CadastrarEntidade(EntidadeBase eb);
         List<EntidadeBase> ListarEntidade();
+        void RemoverEntidade(EntidadeBase eb);
+        void AtualizarEntidade(EntidadeBase eb);
     }
 }
