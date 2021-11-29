@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FabricaPadrao {
-    public class EntidadeBase<T> {
+    public class EntidadeBase {
         public int CodErro { get; set; }
         public string MSGErro { get; set; }
 

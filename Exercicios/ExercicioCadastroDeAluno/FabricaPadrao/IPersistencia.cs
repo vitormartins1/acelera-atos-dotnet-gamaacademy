@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FabricaPadrao {
     public interface IPersistencia {
-        EntidadeBase<object> CadastrarEntidade(EntidadeBase<object> eb);
-        List<EntidadeBase<object>> ListarEntidade();
-        void RemoverEntidade(EntidadeBase<object> eb);
-        void AtualizarEntidade(EntidadeBase<object> eb);
+        T CadastrarEntidade<T>(T eb) where T : class;
+        List<T> ListarEntidade<T>() where T : class;
+        void RemoverEntidade<T>(T eb) where T : class;
+        void AtualizarEntidade<T>(T eb) where T : class;
     }
 }

@@ -19,10 +19,22 @@ namespace ExercicioCadastroDeAluno {
                 FabricaDePersistencia fabrica = FabricaDePersistencia.Instance();
                 IPersistencia ipersistencia = fabrica.CriarPersistencia();
 
-                aluno = ipersistencia.CadastrarEntidade(aluno);
+                aluno = ipersistencia.CadastrarEntidade<Aluno>(aluno);
             }
 
             return aluno;
+        }
+
+        public List<Aluno> ListarAlunos() 
+        {
+            List<Aluno> listaAlunos;
+
+            FabricaDePersistencia fabrica = FabricaDePersistencia.Instance();
+            IPersistencia ipersistencia = fabrica.CriarPersistencia();
+
+            listaAlunos = ipersistencia.ListarEntidade<Aluno>();
+
+            return listaAlunos;
         }
     }
 }

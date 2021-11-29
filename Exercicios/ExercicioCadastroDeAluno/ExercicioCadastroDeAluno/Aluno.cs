@@ -15,7 +15,7 @@ namespace ExercicioCadastroDeAluno {
         NaoAvaliado = 4
     }
 
-    internal class Aluno : EntidadeBase<Aluno>
+    internal class Aluno : EntidadeBase
     {
         private string nome;
         private string cpf;
