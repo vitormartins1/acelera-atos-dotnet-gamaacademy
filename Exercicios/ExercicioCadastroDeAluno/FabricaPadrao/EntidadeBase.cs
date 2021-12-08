@@ -12,9 +12,13 @@ namespace FabricaPadrao {
         public EntidadeBase() {
             this.CodErro = 1;
         }
+
+        public void ErroPersistencia() {
+            throw new NotImplementedException();
+        }
     }
 
     public interface IGenerico {
-
+        void ErroPersistencia();
     }
 }
